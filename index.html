@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kohesify Studio - Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <h2 class="logo">Kohesify</h2>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+            </div>
+            <a href="#footer" class="button nav-button">Contact Us</a>
+            <button class="mobile-menu-button" id="mobile-menu-button">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-nav-links" id="mobile-nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#footer">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Making Brands Stand Out, One Post at a Time.</h1>
+            <p class="hero-subtitle">We are Kohesify, a creative studio specializing in strategic Social Media Design and engaging Reels video content to help your brand capture attention online.</p>
+            <a href="#projects" class="button button-large">See Our Work</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container grid-2-col">
+            <div class="about-content">
+                <h2 class="section-title">Where Your Brand Story Comes to Life.</h2>
+                <p class="section-p">Kohesify was founded on the belief that a strong social media presence is built on strategic, high-quality, and cohesive content. Started by Cahya Sumirat, our studio combines creative design with a deep understanding of digital marketing trends to create visuals that don't just look good, but also perform. Our mission is to be your dedicated creative partner in building an engaging and memorable online brand.</p>
+                <h3 class="subsection-title">Our Creative Toolkit</h3>
+                <div class="toolkit-grid">
+                    <div class="tool-card"> <div class="tool-icon">🎨</div> <p>Figma</p> </div>
+                    <div class="tool-card"> <div class="tool-icon">📐</div> <p>Canva</p> </div>
+                    <div class="tool-card"> <div class="tool-icon">🎬</div> <p>CapCut</p> </div>
+                </div>
+                <button class="button button-outline button-large" id="open-process-modal">Our Process</button>
+            </div>
+            <div class="founder-info">
+                <div class="founder-image-wrapper">
+                    <!-- GANTI GAMBAR INI dengan foto profesional Anda -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Cahya Sumirat - Founder of Kohesify" class="founder-image">
+                </div>
+                <h3 class="founder-name">Cahya Sumirat</h3>
+                <p class="founder-title">Founder @KOHESIFY</p>
+                <p class="founder-bio">Creative director and founder passionate about helping brands tell their stories through strategic design and engaging content.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Services to Elevate Your Social Media</h2>
+            <div class="grid-2-col services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">Strategic Social Media Design</h3>
+                    <p class="section-p">We handle all your visual needs for social media. From cohesive Instagram feed layouts, engaging carousels, and eye-catching story designs to promotional graphics for Facebook. Every design is tailored to your brand identity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3 class="service-title">Reels & Short-Form Video Content</h3>
+                    <p class="section-p">We conceptualize, design, and edit dynamic short-form videos for Instagram Reels and TikToks. We help you jump on trends and create original content that captures your audience's attention and boosts engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Our Recent Work</h2>
+            <p class="section-p" style="max-width: 768px; margin: 0 auto 4rem auto;">Click on any project to see the details. Case studies for our Reels & Video projects are coming soon!</p>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-project-id="1">
+                    <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&fit=crop" alt="Karangjaya Independence Day Campaign" class="project-thumbnail">
+                    <div class="project-card-content">
+                        <span class="badge">Social Media Design</span>
+                        <h3>Karangjaya Independence Day Campaign</h3>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card" data-project-id="2">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="E-commerce Pin Merchandise Design" class="project-thumbnail">
+                    <div class="project-card-content">
+                        <span class="badge">Graphic Design</span>
+                        <h3>E-commerce Pin Merchandise Design</h3>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card" data-project-id="3">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Product Teaser Video" class="project-thumbnail">
+                    <div class="project-card-content">
+                        <span class="badge">Reels Video</span>
+                        <h3>Product Teaser Video</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="footer-title">Kohesify</h3>
+                <p class="footer-p">A creative studio specializing in strategic Social Media Design and engaging video content to help your brand capture attention online.</p>
+                <!-- Social Icons Here -->
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-subtitle">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-subtitle">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:kohesify@gmail.com">kohesify@gmail.com</a></li>
+                    <li><a href="tel:+6287723143269">+62 877-2314-3269</a></li>
+                    <li>Purwakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Kohesify. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals (Pop-ups) -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-project-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <div id="process-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-process-modal">&times;</span>
+            <h2 class="modal-title">Our Creative Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content"><h4>Discovery & Strategy</h4><p>We start by understanding your brand, audience, and goals to create a tailored content strategy.</p></div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content"><h4>Creative Concept</h4><p>Our team develops unique creative concepts that align with your brand identity and resonate with your audience.</p></div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content"><h4>Design & Production</h4><p>We bring concepts to life through high-quality design and video production using our creative toolkit.</p></div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content"><h4>Review & Refine</h4><p>We collaborate closely with you to ensure every piece of content meets your expectations and brand standards.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- DIUBAH: Path ke script.js sekarang menunjuk ke folder 'script' -->
+    <script src="script/script.js"></script>
+</body>
+</html>
