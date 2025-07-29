@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -46,12 +46,22 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- About Us Section (REVISED LAYOUT) -->
     <section id="about" class="section">
-        <div class="container grid-2-col">
+        <div class="container grid-2-col about-section-grid">
+            <div class="about-image-container">
+                <div class="founder-image-wrapper">
+                    <!-- GANTI GAMBAR INI dengan foto profesional Anda -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Cahya Sumirat - Founder of Kohesify" class="founder-image">
+                </div>
+            </div>
             <div class="about-content">
                 <h2 class="section-title">Where Your Brand Story Comes to Life.</h2>
-                <p class="section-p">Kohesify was founded on the belief that a strong social media presence is built on strategic, high-quality, and cohesive content. Started by Cahya Sumirat, our studio combines creative design with a deep understanding of digital marketing trends to create visuals that don't just look good, but also perform. Our mission is to be your dedicated creative partner in building an engaging and memorable online brand.</p>
+                <p class="section-p">Kohesify was founded on the belief that a strong social media presence is built on strategic, high-quality, and cohesive content. Started by Cahya Sumirat, our studio combines creative design with a deep understanding of digital marketing trends to create visuals that don't just look good, but also perform.</p>
+                <div class="founder-details-inline">
+                    <h3 class="founder-name">Cahya Sumirat</h3>
+                    <p class="founder-title">Founder & Creative Director</p>
+                </div>
                 <h3 class="subsection-title">Our Creative Toolkit</h3>
                 <div class="toolkit-grid">
                     <div class="tool-card"> <div class="tool-icon">🎨</div> <p>Figma</p> </div>
@@ -59,15 +69,6 @@
                     <div class="tool-card"> <div class="tool-icon">🎬</div> <p>CapCut</p> </div>
                 </div>
                 <button class="button button-outline button-large" id="open-process-modal">Our Process</button>
-            </div>
-            <div class="founder-info">
-                <div class="founder-image-wrapper">
-                    <!-- GANTI GAMBAR INI dengan foto profesional Anda -->
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Cahya Sumirat - Founder of Kohesify" class="founder-image">
-                </div>
-                <h3 class="founder-name">Cahya Sumirat</h3>
-                <p class="founder-title">Founder @KOHESIFY</p>
-                <p class="founder-bio">Creative director and founder passionate about helping brands tell their stories through strategic design and engaging content.</p>
             </div>
         </div>
     </section>
@@ -189,7 +190,6 @@
         </div>
     </div>
     
-    <!-- DIUBAH: Path ke script.js sekarang menunjuk ke folder 'script' -->
     <script src="script/script.js"></script>
 </body>
 </html>

@@ -46,10 +46,7 @@ body {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-}
-.subsection-title {
-  font-size: 1.875rem;
-  margin-bottom: 2rem;
+  line-height: 1.3;
 }
 .section-p {
   font-size: 1.125rem;
@@ -78,7 +75,7 @@ body {
 .nav-links { display: none; }
 @media (min-width: 768px) {
   .nav-links { display: flex; align-items: baseline; gap: 2rem; }
-  .nav-links a { color: var(--foreground); text-decoration: none; transition: color 0.2s; }
+  .nav-links a { color: var(--foreground); text-decoration: none; transition: color 0.2s; font-weight: 500;}
   .nav-links a:hover { color: var(--primary); }
 }
 .nav-button { display: none; }
@@ -92,7 +89,7 @@ body {
   border-bottom: 1px solid var(--border);
   padding: 1rem;
 }
-.mobile-nav-links a { padding: 0.75rem 0; text-decoration: none; color: var(--foreground); }
+.mobile-nav-links a { padding: 0.75rem 0; text-decoration: none; color: var(--foreground); font-weight: 500; }
 .mobile-nav-links.active { display: flex; }
 
 /* Hero */
@@ -126,27 +123,108 @@ body {
   text-decoration: none;
   border-radius: 0.5rem;
   font-weight: 500;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
-.button:hover { background-color: #1f2937; }
+.button:hover { background-color: #1f2937; transform: translateY(-2px); }
 .button-large { font-size: 1.125rem; padding: 1rem 2rem; }
 .button-outline { background-color: transparent; border: 1px solid var(--border); color: var(--foreground); }
 .button-outline:hover { background-color: var(--secondary); }
 
-/* About Us */
-.grid-2-col { display: grid; gap: 5rem; }
-@media (min-width: 1024px) { .grid-2-col { grid-template-columns: repeat(2, 1fr); } }
-.about-content { display: flex; flex-direction: column; gap: 2rem; }
-.toolkit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 24rem; }
-.tool-card { background-color: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; padding: 1rem; text-align: center; transition: box-shadow 0.2s; }
-.tool-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-.tool-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.founder-info { display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; }
-.founder-image-wrapper { width: 20rem; height: 20rem; border-radius: 1rem; overflow: hidden; background-color: #f3f4f650; box-shadow: 0 8px 24px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
-.founder-image { width: 100%; height: 100%; object-fit: cover; }
-.founder-name { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.founder-title { color: var(--muted-foreground); margin-bottom: 0.75rem; }
-.founder-bio { font-size: 0.875rem; color: var(--muted-foreground); max-width: 24rem; line-height: 1.6; }
+/* About Us Section -- REVISED */
+.grid-2-col { display: grid; gap: 3rem; }
+@media (min-width: 1024px) { .grid-2-col { grid-template-columns: repeat(2, 1fr); gap: 5rem; } }
+
+.about-section-grid {
+  align-items: center; /* Vertically align image and text content */
+}
+
+.about-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1; /* Move image to top on mobile */
+}
+
+@media (min-width: 1024px) {
+    .about-image-container {
+        order: 0; /* Reset order for desktop */
+    }
+}
+
+.founder-image-wrapper {
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: #f3f4f650;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.founder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.founder-details-inline {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.founder-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.founder-title {
+  color: var(--muted-foreground);
+  margin: 0;
+  font-weight: 500;
+}
+
+.subsection-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 24rem;
+}
+
+.tool-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  font-weight: 500;
+}
+
+.tool-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
 
 /* Services */
 .services-grid { max-width: 56rem; margin: 0 auto; gap: 3rem; }
