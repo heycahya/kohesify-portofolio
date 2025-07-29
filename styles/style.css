@@ -9,6 +9,9 @@
   --muted-foreground: #6b7280;
   --border: #e5e7eb;
   --radius: 0.75rem;
+  --dark-bg: #111111;
+  --dark-card: #1f1f1f;
+  --dark-border: #333333;
 }
 
 html {
@@ -127,103 +130,96 @@ body {
 }
 .button:hover { background-color: #1f2937; transform: translateY(-2px); }
 .button-large { font-size: 1.125rem; padding: 1rem 2rem; }
-.button-outline { background-color: transparent; border: 1px solid var(--border); color: var(--foreground); }
-.button-outline:hover { background-color: var(--secondary); }
 
-/* About Us Section -- REVISED V2 */
+/* About Us Section */
 .grid-2-col { display: grid; gap: 3rem; }
 @media (min-width: 1024px) { .grid-2-col { grid-template-columns: repeat(2, 1fr); gap: 5rem; } }
 
 .about-section-grid {
   align-items: center;
 }
-
+.about-content {
+  text-align: left;
+}
 .about-image-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
-
 .founder-image-wrapper {
   width: 100%;
-  max-width: 24rem;
+  max-width: 20rem;
   aspect-ratio: 1 / 1;
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: #f3f4f650;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
 }
-
 .founder-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  text-align: left;
-}
-
-.founder-details-inline {
-    margin-top: -0.5rem;
-    margin-bottom: 1rem;
-}
-
 .founder-name {
   font-size: 1.5rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
 }
-
 .founder-title {
   color: var(--muted-foreground);
   margin: 0;
   font-weight: 500;
 }
 
-.subsection-title {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  font-weight: 600;
-  border-top: 1px solid var(--border);
-  padding-top: 1.5rem;
+/* Tools & Skills Section */
+.section-dark {
+    background-color: var(--dark-bg);
+    color: white;
+}
+.section-dark .section-title {
+    color: white;
+}
+.tools-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.tool-item {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.tool-item:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.skill-item {
+    background-color: transparent;
+    border: 1px solid var(--dark-border);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
 }
 
-.toolkit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 24rem;
-}
-
-.tool-card {
-  background-color: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  text-align: center;
-  transition: box-shadow 0.2s;
-  font-weight: 500;
-}
-
-.tool-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.tool-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Our Process Section -- BARU */
+/* Our Process Section */
 .process-steps {
     display: grid;
     gap: 2rem;
-    max-width: 56rem;
+    max-width: 64rem;
     margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -241,6 +237,15 @@ body {
     flex-direction: column;
     text-align: left;
     gap: 1rem;
+    background-color: var(--card);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.2s;
+}
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 .step-number {
     width: 2.5rem;
