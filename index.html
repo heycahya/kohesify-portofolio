@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kohesify Studio - Portfolio</title>
+    <title>Kohesify Studio - Portfolio & Pricelist</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +11,14 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
             <h2 class="logo">Kohesify</h2>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#pricelist">Pricelist</a>
                 <a href="#projects">Projects</a>
             </div>
             <a href="#footer" class="button nav-button">Contact Us</a>
@@ -31,13 +31,13 @@
         <div class="mobile-nav-links" id="mobile-nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#pricelist">Pricelist</a>
             <a href="#projects">Projects</a>
             <a href="#footer">Contact Us</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <h1 class="hero-title">Making Brands Stand Out, One Post at a Time.</h1>
@@ -46,7 +46,6 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
     <section id="about" class="section">
         <div class="container grid-2-col about-section-grid">
             <div class="about-content">
@@ -63,55 +62,6 @@
         </div>
     </section>
 
-    <!-- Tools & Skills Section -->
-    <section id="skills" class="section section-dark">
-        <div class="container text-center">
-            <h2 class="section-title">Tools and Skills</h2>
-            <div class="tools-grid">
-                <div class="tool-item">Figma</div>
-                <div class="tool-item">Canva</div>
-                <div class="tool-item">CapCut</div>
-                <div class="tool-item">Notion</div>
-                <div class="tool-item">Google Spreadsheet</div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-item">Social Media Design</div>
-                <div class="skill-item">Visual Branding</div>
-                <div class="skill-item">UI/UX Design</div>
-                <div class="skill-item">Video Editing</div>
-                <div class="skill-item">Content Strategy</div>
-                <div class="skill-item">Prototyping</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Process Section -->
-    <section id="process" class="section">
-        <div class="container text-center">
-            <h2 class="section-title">Our Creative Process</h2>
-            <p class="section-p" style="max-width: 768px; margin: 0 auto 4rem auto;">We follow a structured process to ensure every project is a success.</p>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content"><h4>Discovery & Strategy</h4><p>We start by understanding your brand, audience, and goals to create a tailored content strategy.</p></div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content"><h4>Creative Concept</h4><p>Our team develops unique creative concepts that align with your brand identity and resonate with your audience.</p></div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content"><h4>Design & Production</h4><p>We bring concepts to life through high-quality design and video production using our creative toolkit.</p></div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content"><h4>Review & Refine</h4><p>We collaborate closely with you to ensure every piece of content meets your expectations and brand standards.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
     <section id="services" class="section bg-light">
         <div class="container text-center">
             <h2 class="section-title">Services to Elevate Your Social Media</h2>
@@ -130,13 +80,59 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="pricelist" class="section">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title">Packages & Pricing</h2>
+                <p class="section-subtitle">Flexible packages designed to meet your brand's needs on social media.</p>
+            </div>
+
+            <h3 class="subsection-title">A La Carte Services</h3>
+            <div class="card-grid four-columns">
+                 <div class="card">
+                    <div class="card-header"><h3 class="card-title">Single Post Design</h3><p class="card-description">Instagram/Facebook</p></div>
+                    <div class="card-content"><p class="price">IDR 50,000</p><ul><li>✓ 1 minor revision</li></ul></div>
+                    <div class="card-footer"><a href="https://wa.me/6287723143269?text=Hello%20Kohesify,%20I'm%20interested%20in%20the%20Single%20Post%20Design." target="_blank" class="button button-full button-outline">Select Package</a></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Carousel Design</h3><p class="card-description">Up to 5 slides</p></div>
+                    <div class="card-content"><p class="price">IDR 125,000</p><ul><li>✓ 1 minor revision</li></ul></div>
+                    <div class="card-footer"><a href="https://wa.me/6287723143269?text=Hello%20Kohesify,%20I'm%20interested%20in%20the%20Carousel%20Design." target="_blank" class="button button-full button-outline">Select Package</a></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Story Design</h3><p class="card-description">Set of 3 slides</p></div>
+                    <div class="card-content"><p class="price">IDR 75,000</p><ul><li>✓ 1 minor revision</li></ul></div>
+                    <div class="card-footer"><a href="https://wa.me/6287723143269?text=Hello%20Kohesify,%20I'm%20interested%20in%20the%20Story%20Design." target="_blank" class="button button-full button-outline">Select Package</a></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Simple Reels Video</h3><p class="card-description">Editing & music</p></div>
+                    <div class="card-content"><p class="price">IDR 175,000</p><ul><li>✓ 15-30s duration</li><li>✓ 1 minor revision</li></ul></div>
+                    <div class="card-footer"><a href="https://wa.me/6287723143269?text=Hello%20Kohesify,%20I'm%20interested%20in%20the%20Simple%20Reels%20Video." target="_blank" class="button button-full button-outline">Select Package</a></div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title" style="margin-top: 4rem;">Monthly Packages (Launch Offer!)</h3>
+            <div class="card-grid two-columns">
+                 <div class="card">
+                    <div class="card-header"><h3 class="card-title-large">"Visual Starter"</h3><p class="card-description">For Social Media Design</p><p class="price-monthly"><span class="price-amount">IDR 250,000</span> /month</p><p class="price-normal">Normal: IDR 450,000</p></div>
+                    <div class="card-content"><ul><li>✓ 8 Feed Designs</li><li>✓ 4 Story Designs</li><li>✓ 1x Concept Consultation</li><li>✓ 1x Revision per Design</li></ul></div>
+                    <div class="card-footer"><a href="https://wa.me/6287723143269?text=Hello%20Kohesify,%20I'm%20interested%20in%20the%20Visual%20Starter%20Package." target="_blank" class="button button-full button-outline">Select Package</a></div>
+                </div>
+                <div class="card card-recommended">
+                    <span class="badge-recommended">RECOMMENDED</span>
+                    <div class="card-header"><h3 class="card-title-large">"Reels Momentum"</h3><p class="card-description">For Video Content</p><p class="price-monthly"><span class="price-amount">IDR 750,000</span> /month</p><p class="price-normal">Normal: IDR 1,250,000</p></div>
+                    <div class="card-content"><ul><li>✓ 4 Reels Videos (1/week)</li><li>✓ Monthly Content Plan</li><li>✓ Trend & Audio Research</li><li>✓ 2x Revisions per Video</li></ul></div>
+                    <div class="card-footer"><a href="https://wa.me/6287723143269?text=Hello%20Kohesify,%20I'm%20interested%20in%20the%20Reels%20Momentum%20Package." target="_blank" class="button button-full">Select Package</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
         <div class="container text-center">
             <h2 class="section-title">Our Recent Work</h2>
             <p class="section-p" style="max-width: 768px; margin: 0 auto 4rem auto;">Click on any project to see the details. Case studies for our Reels & Video projects are coming soon!</p>
             <div class="project-grid">
-                <!-- Project 1 -->
                 <div class="project-card" data-project-id="1">
                     <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&fit=crop" alt="Karangjaya Independence Day Campaign" class="project-thumbnail">
                     <div class="project-card-content">
@@ -144,7 +140,6 @@
                         <h3>Karangjaya Independence Day Campaign</h3>
                     </div>
                 </div>
-                <!-- Project 2 -->
                 <div class="project-card" data-project-id="2">
                     <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="E-commerce Pin Merchandise Design" class="project-thumbnail">
                     <div class="project-card-content">
@@ -152,7 +147,6 @@
                         <h3>E-commerce Pin Merchandise Design</h3>
                     </div>
                 </div>
-                <!-- Project 3 -->
                 <div class="project-card" data-project-id="3">
                     <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Product Teaser Video" class="project-thumbnail">
                     <div class="project-card-content">
@@ -164,7 +158,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="footer" class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
@@ -177,6 +170,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#pricelist">Pricelist</a></li>
                     <li><a href="#projects">Projects</a></li>
                 </ul>
             </div>
@@ -194,7 +188,6 @@
         </div>
     </footer>
 
-    <!-- Modals (Pop-ups) -->
     <div id="project-modal" class="modal">
         <div class="modal-content">
             <span class="close-button" id="close-project-modal">&times;</span>
