@@ -1,3 +1,4 @@
+/* Global Styles */
 :root {
   --background: #ffffff;
   --foreground: #111827;
@@ -130,7 +131,6 @@ section[id] {
   color: var(--primary);
   font-size: 1.5rem;
   font-weight: 700;
-  text-decoration: none;
 }
 .nav-links {
   display: none;
@@ -203,8 +203,6 @@ section[id] {
   margin-bottom: 1.5rem;
   max-width: 48rem;
   line-height: 1.2;
-  margin-left: auto;
-  margin-right: auto;
 }
 .hero-subtitle {
   font-size: 1.25rem;
@@ -212,8 +210,6 @@ section[id] {
   max-width: 42rem;
   margin-bottom: 2.5rem;
   line-height: 1.75;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (min-width: 768px) {
   .hero-title {
@@ -258,7 +254,7 @@ section[id] {
   color: var(--primary);
 }
 
-/* Card Styles (Untuk Pricelist) */
+/* Card Styles */
 .card {
   background-color: var(--card);
   color: var(--foreground);
@@ -398,14 +394,6 @@ section[id] {
 .service-card {
   padding: 2rem;
   text-align: left;
-  background-color: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.service-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transform: translateY(-5px);
 }
 .service-icon {
   font-size: 2.5rem;

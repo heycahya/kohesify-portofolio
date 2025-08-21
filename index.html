@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kohesify - Social Media Design & Reels Content Studio</title>
-
+    <title>Kohesify Studio - Portfolio & Pricelist</title>
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="container nav-container">
-        <a href="#home" class="logo">Kohesify</a>
+        <h2 class="logo">Kohesify</h2>
         <div class="nav-links">
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#pricelist">Pricelist</a>
           <a href="#projects">Projects</a>
-          <a href="#pricing">Pricing</a>
         </div>
-        <a href="#contact" class="button nav-button">Contact Us</a>
+        <a href="#footer" class="button nav-button">Contact Us</a>
         <button class="mobile-menu-button" id="mobile-menu-button">
           <svg
             class="h-6 w-6"
@@ -45,14 +44,14 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#pricelist">Pricelist</a>
         <a href="#projects">Projects</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#footer">Contact Us</a>
       </div>
     </nav>
 
     <section id="home" class="hero">
-      <div class="container text-center">
+      <div class="container">
         <h1 class="hero-title">Making Brands Stand Out, One Post at a Time.</h1>
         <p class="hero-subtitle">
           We are Kohesify, a creative studio specializing in strategic Social
@@ -72,15 +71,13 @@
             presence is built on strategic, high-quality, and cohesive content.
             Started by Cahya Sumirat, our studio combines creative design with a
             deep understanding of digital marketing trends to create visuals
-            that don't just look good, but also perform. Our mission is to be
-            your dedicated creative partner in building an engaging and
-            memorable online brand.
+            that don't just look good, but also perform.
           </p>
         </div>
         <div class="about-image-container">
           <div class="founder-image-wrapper">
             <img
-              src="https://placehold.co/400x400/E2E8F0/4A5568?text=Your+Photo"
+              src="images/cahya-profile.jpg"
               alt="Cahya Sumirat - Founder of Kohesify"
               class="founder-image"
             />
@@ -110,7 +107,7 @@
             <h3 class="service-title">Reels & Short-Form Video Content</h3>
             <p class="section-p">
               We conceptualize, design, and edit dynamic short-form videos for
-              Instagram Reels and TikTok. We help you jump on trends and create
+              Instagram Reels and TikToks. We help you jump on trends and create
               original content that captures your audience's attention and
               boosts engagement.
             </p>
@@ -119,24 +116,13 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container text-center">
-        <h2 class="section-title">Our Recent Work</h2>
-        <p class="section-p" style="max-width: 768px; margin: 0 auto 4rem auto">
-          Click on any project to see the details. Case studies for our Reels &
-          Video projects are coming soon!
-        </p>
-        <div class="project-grid"></div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section bg-light">
+    <section id="pricelist" class="section">
       <div class="container">
         <div class="text-center section-header">
-          <span class="badge badge-destructive">★ SPECIAL LAUNCH OFFER!</span>
           <h2 class="section-title">Packages & Pricing</h2>
           <p class="section-subtitle">
-            Limited to the first 5 clients to build our portfolio together.
+            Flexible packages designed to meet your brand's needs on social
+            media.
           </p>
         </div>
 
@@ -226,7 +212,7 @@
         </div>
 
         <h3 class="subsection-title" style="margin-top: 4rem">
-          Monthly Packages
+          Monthly Packages (Launch Offer!)
         </h3>
         <div class="card-grid two-columns">
           <div class="card">
@@ -286,7 +272,52 @@
       </div>
     </section>
 
-    <footer id="contact" class="footer">
+    <section id="projects" class="section bg-light">
+      <div class="container text-center">
+        <h2 class="section-title">Our Recent Work</h2>
+        <p class="section-p" style="max-width: 768px; margin: 0 auto 4rem auto">
+          Click on any project to see the details. Case studies for our Reels &
+          Video projects are coming soon!
+        </p>
+        <div class="project-grid">
+          <div class="project-card" data-project-id="1">
+            <img
+              src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&fit=crop"
+              alt="Karangjaya Independence Day Campaign"
+              class="project-thumbnail"
+            />
+            <div class="project-card-content">
+              <span class="badge">Social Media Design</span>
+              <h3>Karangjaya Independence Day Campaign</h3>
+            </div>
+          </div>
+          <div class="project-card" data-project-id="2">
+            <img
+              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop"
+              alt="E-commerce Pin Merchandise Design"
+              class="project-thumbnail"
+            />
+            <div class="project-card-content">
+              <span class="badge">Graphic Design</span>
+              <h3>E-commerce Pin Merchandise Design</h3>
+            </div>
+          </div>
+          <div class="project-card" data-project-id="3">
+            <img
+              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
+              alt="Product Teaser Video"
+              class="project-thumbnail"
+            />
+            <div class="project-card-content">
+              <span class="badge">Reels Video</span>
+              <h3>Product Teaser Video</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
       <div class="container footer-grid">
         <div class="footer-col">
           <h3 class="footer-title">Kohesify</h3>
@@ -301,6 +332,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#pricelist">Pricelist</a></li>
             <li><a href="#projects">Projects</a></li>
           </ul>
         </div>
@@ -308,12 +340,8 @@
           <h4 class="footer-subtitle">Contact</h4>
           <ul class="footer-links">
             <li><a href="mailto:kohesify@gmail.com">kohesify@gmail.com</a></li>
-            <li>
-              <a href="https://wa.me/6287723143269" target="_blank"
-                >+62 877-2314-3269</a
-              >
-            </li>
-            <li>Indramayu, Indonesia</li>
+            <li><a href="tel:+6287723143269">+62 877-2314-3269</a></li>
+            <li>Purwakarta, Indonesia</li>
           </ul>
         </div>
       </div>
