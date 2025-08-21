@@ -1,58 +1,128 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+  // =========================================================================
+  // DATABASE PROYEK ANDA - GANTI KONTEN DI SINI
+  // =========================================================================
+  const projectsData = {
+    1: {
+      title: "Reels Video Series for Shinjipedia",
+      category: "Reels Video & Motion Graphics",
+      thumbnail: "images/shinjipedia-reels-thumb-1.jpg", // GANTI dengan gambar thumbnail Anda
+      images: [
+        "images/shinjipedia-reels-thumb-1.jpg", // GANTI dengan screenshot/video Anda
+      ],
+      challenge:
+        "Shinjipedia wanted to leverage the short-form video trend to increase reach and engagement, but lacked the resources for consistent video production.",
+      solution:
+        "We produced a series of dynamic Reels videos that followed trends, incorporating motion graphics and popular audio. This video series significantly increased account visibility and follower growth.",
+    },
+    2: {
+      title: "Strategic Social Media Design for Shinjipedia",
+      category: "Social Media Design & Brand Identity",
+      thumbnail: "images/shinjipedia-feed-mockup.jpg", // GANTI dengan gambar thumbnail Anda
+      images: [
+        "images/shinjipedia-feed-mockup.jpg",
+        "images/shinjipedia-carousel-example.jpg",
+        "images/shinjipedia-promo-example.jpg",
+      ],
+      challenge:
+        "As a legally registered company (PT), Shinjipedia needed a social media visual identity that clearly communicated trust, professionalism, and reliability to stand out from informal competitors.",
+      solution:
+        "We took over the visual strategy, focusing on brand consistency with the Shinji-chan mascot, creating educational content about transaction security, and designing engaging templates for quizzes and testimonials. This transformed Shinjipedia's feed to be more professional and effective.",
+    },
+    3: {
+      title: "Karangjaya Independence Day Campaign",
+      category: "Event Branding & Social Media",
+      thumbnail: "images/karangjaya-poster-final.jpg", // GANTI dengan gambar thumbnail Anda
+      images: [
+        "images/karangjaya-poster-final.jpg",
+        "images/karangjaya-banner-final.jpg",
+        "images/karangjaya-brosur-final.jpg",
+      ],
+      challenge:
+        "The Karangjaya youth committee required a professional and festive visual campaign to maximize citizen participation in the annual Independence Day celebration.",
+      solution:
+        "We designed a complete set of promotional materials, including banners, posters, and social media graphics. The cohesive and spirited design successfully increased event awareness and helped achieve record participation.",
+    },
+    4: {
+      title: "Social Media Campaign for Waroeng Es Teh Yuyun",
+      category: "Social Media Design & Marketing",
+      thumbnail: "images/teh-yuyun-mockup.jpg", // GANTI dengan gambar thumbnail Anda
+      images: [
+        "images/teh-yuyun-mockup.jpg",
+        "images/teh-yuyun-promo.jpg",
+        "images/teh-yuyun-testimoni.jpg",
+      ],
+      challenge:
+        "Waroeng Es Teh Yuyun, a local culinary business, needed a strong visual strategy to increase brand awareness and engagement on social media.",
+      solution:
+        "We designed and executed a series of cohesive visual content, including product photos and engaging graphics, which resulted in an average engagement rate increase of 30%.",
+    },
+    5: {
+      title: "Brand Credibility Campaign for HiSport",
+      category: "Visual Branding & Social Media",
+      thumbnail: "images/hisport-mockup.jpg", // GANTI dengan gambar thumbnail Anda
+      images: [
+        "images/hisport-mockup.jpg",
+        "images/hisport-new-collection.jpg",
+        "images/hisport-testimonial.jpg",
+      ],
+      challenge:
+        "As an SME sports brand, HiSport needed to build credibility and trust in a competitive market. They required visuals that effectively showcased product quality and positive customer reviews.",
+      solution:
+        "We designed various engaging and informative visual elements, including high-quality product graphics. By highlighting positive testimonials from customers and athletes, we successfully built a more trustworthy and professional brand image.",
+    },
+  };
 
-    // Data untuk proyek (agar tidak perlu ditulis ulang di JS)
-    const projectsData = {
-        1: {
-            title: "Karangjaya Independence Day Campaign",
-            category: "Social Media Design",
-            images: [
-                "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=600&fit=crop",
-                "https://images.unsplash.com/photo-1515378791036-0648a814c963?w=800&h=600&fit=crop",
-                "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop"
-            ],
-            challenge: "The committee needed to create a festive and informative visual campaign to attract community participation for the 80th Indonesian Independence Day celebration.",
-            solution: "We designed a cohesive set of visual assets including banners, posters, and brochures, using a vibrant and nationalistic theme to boost excitement and clarify event information."
-        },
-        2: {
-            title: "E-commerce Pin Merchandise Design",
-            category: "Graphic Design",
-            images: [
-                "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-                "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
-            ],
-            challenge: "A Tokopedia seller needed eye-catching product designs for their pin merchandise collection to stand out in the competitive e-commerce marketplace.",
-            solution: "We created a series of modern, trendy pin designs with bold colors and contemporary graphics that appeal to young consumers and drive sales."
-        },
-        3: {
-            title: "Product Teaser Video",
-            category: "Reels Video",
-            images: [
-                "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-                "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=600&fit=crop"
-            ],
-            challenge: "A startup needed to create buzz around their new product launch with engaging short-form video content for social media.",
-            solution: "We produced dynamic teaser videos with motion graphics and trending audio that generated excitement and drove pre-order sign-ups across Instagram and TikTok."
-        }
-    };
+  // =========================================================================
+  // FUNGSI UNTUK MENAMPILKAN PROYEK SECARA DINAMIS
+  // =========================================================================
+  const projectGrid = document.querySelector(".project-grid");
+  if (projectGrid) {
+    projectGrid.innerHTML = ""; // Kosongkan grid terlebih dahulu
+    // Tampilkan proyek sesuai urutan ID (1, 2, 3, 4, 5)
+    Object.keys(projectsData)
+      .sort((a, b) => a - b)
+      .forEach((id) => {
+        const project = projectsData[id];
+        const projectCardHTML = `
+                <div class="project-card" data-project-id="${id}">
+                    <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
+                    <div class="project-card-content">
+                        <span class="badge">${project.category}</span>
+                        <h3>${project.title}</h3>
+                    </div>
+                </div>
+            `;
+        projectGrid.innerHTML += projectCardHTML;
+      });
+  }
 
-    // Fungsi untuk Modal Proyek
-    const projectModal = document.getElementById('project-modal');
-    const modalBody = document.getElementById('modal-body');
-    const closeProjectModalBtn = document.getElementById('close-project-modal');
-    const projectCards = document.querySelectorAll('.project-card');
+  // =========================================================================
+  // FUNGSI UNTUK MODAL (POP-UP)
+  // =========================================================================
+  const projectModal = document.getElementById("project-modal");
+  const modalBody = document.getElementById("modal-body");
+  const closeProjectModalBtn = document.getElementById("close-project-modal");
 
-    projectCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const projectId = card.dataset.projectId;
-            const project = projectsData[projectId];
-            
-            if (project) {
-                modalBody.innerHTML = `
+  // Kita harus menambahkan event listener setelah kartu proyek dibuat
+  const projectCards = document.querySelectorAll(".project-card");
+
+  projectCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const projectId = card.dataset.projectId;
+      const project = projectsData[projectId];
+
+      if (project) {
+        modalBody.innerHTML = `
                     <h2 class="modal-title">${project.title}</h2>
                     <span class="badge">${project.category}</span>
                     <div class="modal-gallery">
-                        ${project.images.map(img => `<img src="${img}" alt="${project.title}" class="modal-img">`).join('')}
+                        ${project.images
+                          .map(
+                            (img) =>
+                              `<img src="${img}" alt="${project.title}" class="modal-img">`
+                          )
+                          .join("")}
                     </div>
                     <div>
                         <h4>The Challenge</h4>
@@ -63,43 +133,38 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${project.solution}</p>
                     </div>
                 `;
-                projectModal.style.display = 'block';
-            }
-        });
+        projectModal.style.display = "block";
+      }
     });
+  });
 
-    closeProjectModalBtn.onclick = () => projectModal.style.display = "none";
+  if (closeProjectModalBtn) {
+    closeProjectModalBtn.onclick = () => (projectModal.style.display = "none");
+  }
 
-    // Fungsi untuk Modal Proses
-    const processModal = document.getElementById('process-modal');
-    const openProcessModalBtn = document.getElementById('open-process-modal');
-    const closeProcessModalBtn = document.getElementById('close-process-modal');
+  window.onclick = (event) => {
+    if (event.target == projectModal) {
+      projectModal.style.display = "none";
+    }
+  };
 
-    openProcessModalBtn.onclick = () => processModal.style.display = "block";
-    closeProcessModalBtn.onclick = () => processModal.style.display = "none";
-    
-    // Fungsi untuk menutup modal jika klik di luar konten
-    window.onclick = (event) => {
-        if (event.target == projectModal) {
-            projectModal.style.display = "none";
-        }
-        if (event.target == processModal) {
-            processModal.style.display = "none";
-        }
-    };
+  // =========================================================================
+  // FUNGSI UNTUK MENU MOBILE
+  // =========================================================================
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileNavLinks = document.getElementById("mobile-nav-links");
 
-    // Fungsi untuk Mobile Menu
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileNavLinks = document.getElementById('mobile-nav-links');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileNavLinks.classList.toggle('active');
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", () => {
+      mobileNavLinks.classList.toggle("active");
     });
+  }
 
-    // Menutup menu mobile setelah link diklik
-    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileNavLinks.classList.remove('active');
-        });
+  document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileNavLinks.classList.contains("active")) {
+        mobileNavLinks.classList.remove("active");
+      }
     });
+  });
 });
